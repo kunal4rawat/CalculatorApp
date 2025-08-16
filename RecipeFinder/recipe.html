@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find Recipes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col"
+  >
+    <!-- HEADER -->
+    <header
+      class="bg-white dark:bg-gray-800 shadow-md py-3 px-6 flex items-center justify-between"
+    >
+      <div class="text-2xl font-bold tracking-wide">
+        <a href="recipe.html">Recipe Finder</a>
+      </div>
+      <div
+        class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden border border-gray-300 dark:border-gray-600 w-full max-w-xs"
+      >
+        <input
+          type="search"
+          placeholder="Search..."
+          class="px-4 py-2 text-sm bg-transparent flex-1 focus:outline-none"
+          id="DishName"
+        />
+        <button id="search" class="cursor-pointer">
+          <i class="fas fa-search px-4 text-gray-500"></i>
+        </button>
+      </div>
+      <button
+        class="bg-indigo-500 text-white px-5 py-2 rounded-lg shadow hover:bg-indigo-600 transition"
+        id="random"
+      >
+        Random Recipe
+      </button>
+    </header>
+    <container class="flex-1 px-6 py-12">
+      <div
+        class="max-w-4xl mx-auto mb-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow hidden"
+        id="display"
+      >
+        <h2 class="text-2xl font-bold mb-2"></h2>
+        <p class="text-gray-600 dark:text-gray-300"></p>
+      </div>
+    </container>
+
+    <!-- MAIN SECTION -->
+    <main class="flex-1 px-6 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-semibold">Recipe Category</h1>
+        <p class="mt-2 text-gray-500 dark:text-gray-400">
+          Find the latest Recipes here.
+        </p>
+      </div>
+
+      <div
+        class="w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      >
+        <!-- Chicken -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Chicken"
+        >
+          <img
+            src="images/chicken.jpg"
+            alt="Chicken"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Chicken</span>
+        </button>
+        <!-- Dessert -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Dessert"
+        >
+          <img
+            src="images/dessert.jpg"
+            alt="Dessert"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Dessert</span>
+        </button>
+        <!-- Pasta -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Pasta"
+        >
+          <img
+            src="images/pasta.jpg"
+            alt="Pasta"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Pasta</span>
+        </button>
+        <!-- Seafood -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Seafood"
+        >
+          <img
+            src="images/seafood.jpg"
+            alt="Seafood"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Seafood</span>
+        </button>
+        <!-- Side -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Side"
+        >
+          <img
+            src="images/side.jpg"
+            alt="Side"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Side</span>
+        </button>
+        <!-- Starter -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Starter"
+        >
+          <img
+            src="images/stater.jpg"
+            alt="Starter"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Starter</span>
+        </button>
+        <!-- Vegan -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Vegan"
+        >
+          <img
+            src="images/vegan.jpeg"
+            alt="Vegan"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Vegan</span>
+        </button>
+        <!-- Vegetarian -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Vegetarian"
+        >
+          <img
+            src="images/vegetarian.png"
+            alt="Vegetarian"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Vegetarian</span>
+        </button>
+        <!-- Breakfast -->
+        <button
+          class="cursor-pointer flex flex-col items-center bg-orange-400 px-4 py-2 rounded-xl shadow hover:bg-orange-500 transition focus:outline-none"
+          id="Breakfast"
+        >
+          <img
+            src="images/breakfast.jpg"
+            alt="Breakfast"
+            class="rounded-lg w-full h-28 object-cover mb-2"
+          />
+          <span class="text-white font-semibold">Breakfast</span>
+        </button>
+      </div>
+    </main>
+    <script src="recipe.js"></script>
+  </body>
+</html>
